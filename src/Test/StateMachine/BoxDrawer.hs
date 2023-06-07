@@ -103,5 +103,5 @@ exec :: [(EventType, Pid)] -> Fork [String] -> Doc
 exec evT (Fork lops pops rops) = vsep $ map text (preBoxes ++ parBoxes)
   where
     preBoxes = let pref = compilePrefix pops
-               in map (adjust $ maximum $ map ((2+) . size) pref ++ map ((2+) . length) (take 1 parBoxes)) pref
+               in map (adjust $ maximum $ map ((2 + ) . size) pref ++ map ((2 + ) . length) (take 1 parBoxes)) pref
     parBoxes = next . compile $ toEvent evT (lops, rops)
