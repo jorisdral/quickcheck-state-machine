@@ -56,7 +56,7 @@ library
   other-modules:
       Paths_quickcheck_state_machine
   build-depends:
-        ansi-wl-pprint >=0.6.7.3,
+        ansi-wl-pprint >=0.6.7.3 && < 1.0,
         base >=4.10 && <5,
         containers >=0.5.7.1,
         directory >=1.0.0.0,
